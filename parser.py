@@ -71,12 +71,3 @@ class ParserCentralBank:
 
 loop = asyncio.get_event_loop()
 pars = ParserCentralBank(loop)
-
-#
-# async def main():
-#     num = await pars.USD
-#     print(num)
-#
-#
-# if __name__ == "__main__":
-#     asyncio.run(main())
