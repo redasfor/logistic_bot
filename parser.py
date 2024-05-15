@@ -21,7 +21,6 @@ class ParserCentralBank:
         loop.run_until_complete(self.fetch_exchange_rates())
 
     async def fetch_exchange_rates(self):
-        # Assign exchange rates by awaiting the async calls
         self.KGS = await self.get_exchange_rate("Киргизских сомов")
         self.USD = await self.get_exchange_rate("Доллар США")
         self.TRY = await self.get_exchange_rate("Турецких лир")
@@ -44,7 +43,7 @@ class ParserCentralBank:
     ):
         from_val, to_val = from_val.upper(), to_val.upper()
 
-        # Убедитесь, что nominal преобразован в Decimal
+        # Убеждаемся, что nominal преобразован в Decimal
         nominal = Decimal(str(nominal))
 
         # Предположим, что dicts уже заполнен и содержит строки, которые можно преобразовать в Decimal
